@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /*
-    Poniżej napisz kod rozwiązujący zadania. Odpowiedzi oddzielaj komentarzami.
-     */
+    let element = document.getElementsByClassName('title');
+    function getDataAnimation(element)
+    {
+        let newElement = element[0].dataset.animation;
+        return newElement;
+    }
+
+    console.log(getDataAnimation(element));
+
+    let home = document.getElementById('home');
+    let homeTwo = document.querySelector('#home');
+    let firstLi = document.querySelector('li[data-direction]');
+    let firstBlock = document.querySelector('.block');
+
+    console.log(home);
+    console.log(homeTwo);
+    console.log(firstLi);
+    console.log(firstBlock);
+    
+    let allLi = document.querySelector('nav').querySelectorAll('li');
+    
+    console.log(allLi);
 
 });
