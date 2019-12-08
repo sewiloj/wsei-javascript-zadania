@@ -22,4 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     console.log(allLi);
 
+    // zad2
+    const nav = document.getElementsByTagName('nav')[0];
+    const li = nav.getElementsByTagName('li');
+    console.log(li);
+
+    //zad3 
+    const article = document.querySelector('article.first');
+    console.log("article > h2", article.getElementsByTagName('h2').length);
+
 });
