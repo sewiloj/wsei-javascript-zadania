@@ -1,10 +1,21 @@
-function Hi()
-{
-    Console.log("Cześć");
-}
+//Funkcja wypisuje "Cześć":
+hello();
+function hello() {
+    console.log("Cześć");
+};
+//Funkcja wypisuje "Cześć":
+// hello();
+
+//Funkcja nie wypisuje "Witaj":
+welcome();
+let welcome = function () {
+    console.log("Witaj");
+};
+//Funkcja wypisuje "Witaj":
+// welcome();
 
 
-
-var Hitwo = function(){
-    Console.log("Witaj");
-}
+// gdy jest wyrażenie funkcyjne: let welcome = function()...
+//miejsce wywołania wyrażenia ma znaczenie,
+// gdy wywołanie wystapi przed definicją wyrażenia
+//to wtedy wyrzuci błąd

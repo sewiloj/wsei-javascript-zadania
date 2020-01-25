@@ -5,28 +5,30 @@
  */
 
 
-//Twoj komentarz ...
+//funkcja "jeden"
 function jeden() {
 
-    //Twoj komentarz ...
+    //zmienna o zasiegu blokowym
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    //funckja "dwa"
     function dwa() {
 
-        //Twoj komentarz ...
+        //wyświetlenie "zmienna1"
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        //zmianna o zasiegu blokowym
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    //wywołanie funkcji "dwa"
     dwa();
 
-    //Twoj komentarz ...
-    console.log(zmienna2)
+    // proba wypisania "zmienna2"
+    // zmienna nie ma "zasiegu" poza funkcje "dwa" poniewaz
+    // jej przypisanie znajduje się wewnatrz funkcji "dwa" 
+    console.log(zmienna2);
 }
 
-//Twoj komentarz ...
-jeden()
+// wywołanie funkcji jeden
+jeden();

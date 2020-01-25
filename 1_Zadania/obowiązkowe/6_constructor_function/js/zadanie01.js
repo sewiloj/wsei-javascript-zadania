@@ -1,7 +1,8 @@
+//Zadanie 1
 var Robot = function (name) {
     this.name = name;
     this.isFunctional = true;
-}
+};
 
 Robot.prototype.sayHi = function (toWho) {
     if (this.isFunctional === true) {
@@ -13,11 +14,16 @@ Robot.prototype.sayHi = function (toWho) {
 };
 
 Robot.prototype.changeName = function (newname) {
-    console.log("Robot " + this.name + " changes name to " + newname);
+    console.log("Robot " + this.name + "changes name to " + newname);
     this.name = newname;
 };
 
 Robot.prototype.fixIt = function () {
     this.isFunctional = true;
-    console.log("Robot " + this.name + "was fixed");
+    console.log("Robot " + this.name + " was fixed");
 };
+
+var robot = new Robot("Robot1")
+robor.sayHi("Robot2");
+robot.changeName('Robot3');
+robot.fixIt();
