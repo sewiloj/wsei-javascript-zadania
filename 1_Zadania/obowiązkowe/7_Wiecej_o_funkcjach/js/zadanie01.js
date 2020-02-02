@@ -8,7 +8,7 @@
 //utworzenie funkcji sortArray
 function sortArray() {
 
-    //zdefiniowanie tablicy z danymi
+    //zdefiniowanie tablicy i przypisanie danych
     var points = [41, 3, 6, 1, 114, 54, 64];
 
     //wywołanie funkcji sort na elementach tablicy

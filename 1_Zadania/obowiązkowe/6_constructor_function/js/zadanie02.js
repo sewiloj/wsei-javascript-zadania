@@ -1,29 +1,40 @@
-//Zadanie 2
-const Calculator = function () {
-    this.operation = [];
+class Calculator {
+	constructor() {
+		this.history = [];
+	}
 };
 
-Calculator.prototype.add = function (num1, num2) {
-    this.operation.push(`added ${num1} to ${num2} got ${num1 + num2}`);
-    return num1 + num2;
+Calculator.prototype.add = function(num1, num2) {
+	let result = num1 + num2;
+	this.history.push(`added ${num1} to ${num2} got ${result}`);
+	return result;
 };
-Calculator.prototype.multiply = function (num1, num2) {
-    this.operation.push(`multiplied ${num1} with ${num2} got ${num1 * num2}`);
-    return num1 * num2;
+
+Calculator.prototype.multiply = function(num1, num2) {
+	let result = num1 * num2;
+	this.history.push(`multiplied ${num1} with ${num2} got ${result}`);
+	return result;
 };
-Calculator.prototype.subtract = function (num1, num2) {
-    this.operation.push(`subtracted ${num1} from ${num2} got ${num1 - num2}`);
-    return num1 - num2;
+
+Calculator.prototype.substract = function(num1, num2) {
+	let result = num1 - num2;
+	this.history.push(`substracted ${num1} from ${num2} got ${result}`);
+	return result;
 };
-Calculator.prototype.divide = function (num1, num2) {
-    this.operation.push(`divided ${num1} by ${num2} got ${num1 - num2}`);
-    return num1 - num2;
+
+Calculator.prototype.divide = function(num1, num2) {
+	if (num2 === 0) {
+		throw new Error('You cannot divide by 0!');
+	}
+	let result = num1 / num2;
+	this.history.push(`dividied ${num1} by ${num2} got ${result}`);
+	return result;
 };
-Calculator.prototype.printOperations = function (num1, num2) {
-    this.operation.map(el => {
-        console.log(el);
-    });
-};
-Calculator.prototype.clearoperations = function (num1, num2) {
-    this.operation = [];
-};
+
+const calculator = new Calculator;
+const add = calculator.add(10, 5);
+const mul = calculator.multiply(3, 5);
+const sub = calculator.substract(20, 15);
+const div = calculator.divide(20, 2);
+
+console.log(add, mul, sub, div, calculator.history);

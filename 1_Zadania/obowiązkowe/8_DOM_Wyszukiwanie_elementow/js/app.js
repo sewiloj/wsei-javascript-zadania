@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(firstBlock);
     
 
-    // zad2
+    // Zadanie 2
     let navLiElements = document.querySelectorAll('nav li');
     console.log(navLiElements);
     console.log(navLiElements.length);
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(allDivArticle);
     console.log(allDivArticle.length);
 
-    //zad3 
+    // Zadanie 3 
     let firstArticle = document.querySelectorAll("article.first");
     console.log(firstArticle);
     console.log(firstArticle.length);

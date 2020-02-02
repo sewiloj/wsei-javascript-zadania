@@ -1,21 +1,18 @@
-//Funkcja wypisuje "Cześć":
+//Funckja jest poprawnie wywoływana
 hello();
 function hello() {
     console.log("Cześć");
 };
-//Funkcja wypisuje "Cześć":
-// hello();
+//Funckja jest poprawnie wywoływana
+hello();
 
-//Funkcja nie wypisuje "Witaj":
+//Wyrzucany jest błąd, mówiący o tym, że nie możemy użyć funkcji przed jej zadeklarowaniem
 welcome();
 let welcome = function () {
     console.log("Witaj");
 };
-//Funkcja wypisuje "Witaj":
-// welcome();
+//Funckja jest poprawnie wywoływana
+welcome();
 
 
-// gdy jest wyrażenie funkcyjne: let welcome = function()...
-//miejsce wywołania wyrażenia ma znaczenie,
-// gdy wywołanie wystapi przed definicją wyrażenia
-//to wtedy wyrzuci błąd
+// gdy używamy wyrażenia funkcyjego, musimy wywoływać funkcje po jej zdeklarowaniu

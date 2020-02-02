@@ -1,15 +1,15 @@
-//Zadanie 0
+//Zadanie 0a
 const city = {
-    capital: "Warszawa",
-    population: 12345678,
-    president: "Kwaśniewski",
-    primeMinister: ["Duda", "Kaczynski", "Tusk"]
+    capital: "Kraków",
+    population: 100000,
+    president: "Kowalski",
+    primeMinister: ["Kaczor", "Donald", "Dudeł"]
 }
 console.log(city.capital);
 console.log(city.population);
 console.log(city.president);
 console.log(city.primeMinister);
-
+// Zadanie 0b
 const timeMachine = {
     shape: "shape",
     model: "model",
@@ -19,13 +19,13 @@ const timeMachine = {
 }
 console.log(timeMachine.shape);
 console.log(timeMachine.model);
-console.log(timeMachine.run("20.10.2099", "Kraków"));
+console.log(timeMachine.run("20.10.2077", "Kraków"));
 
 //Zadanie 1
 const book = {
-    title: "W pustyni i w puszczy",
-    author: "H. Sienkiewicz",
-    numberOfPage: 999
+    title: "Outsider",
+    author: "S. King",
+    numberOfPage: 666
 };
 console.log(book.title);
 console.log(book.author);
@@ -33,8 +33,8 @@ console.log(book.numberOfPage);
 
 //Zadanie 2
 const person = {
-    name: "Andrzej",
-    age: 20,
+    name: "Kuba",
+    age: 23,
     sayHello() {
         console.log("hello");
     }
@@ -45,11 +45,11 @@ person.sayHello();
 
 //Zadanie 3
 const recipe = {
-    title: "Szarlotka",
-    servings: 20,
+    title: "Karpatka",
+    servings: 10,
 };
 
-recipe.ingredients = ["jabłka", "4 jajka", "mąka", "proszek do pieczenia"];
+recipe.ingredients = ["krem", "budyń", "ciasto"];
 console.log(recipe.title);
 console.log(recipe.servings);
 console.log(recipe.ingredients);

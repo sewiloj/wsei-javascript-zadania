@@ -5,83 +5,82 @@ document.addEventListener("DOMContentLoaded", function () {
     var blocks = document.querySelectorAll(".block");
     var links = document.querySelector(".links").children;
 
-    /*
-    Poniżej napisz kod rozwiązujący zadania
-     */
     //Zadanie 0
     function getDatasInfo(elements) {
-        let newArraydata = [];
+        let newArray = [];
         for (let i = 0; i < elements.length; i++) {
-            newArraydata.push(elements[i].dataset.color);
+            newArray.push(elements[i].dataset.color);
         }
-        return newArraydata;
-    };
+        return newArray;
+    }
     console.log(getDatasInfo(links));
 
     //Zadanie 1
-
-    console.log(homeElement, "homeElement");
+    console.log(homeElement);
     console.log(childElements, "childELements");
     console.log(banner, "banner");
     console.log(blocks, "blocks");
     console.log(links, "links");
 
-    [homeElement, childElements, banner, blocks, links].forEach(function (element, index) {
+    [homeElement, childElements, banner, blocks, links].forEach(function (element) {
         if (element instanceof HTMLCollection || element instanceof NodeList) {
             for (let i = 0; i < element.length; i++) {
                 console.log(element[i].tagName, " - tag name");
                 console.log(element[i].className, " - class name");
             }
             console.log("----------------------");
-            console.log("Koniec" + index + "iteracji");
-            console.log("----------------------");
         }
-    });
+    })
 
 
     // Zadanie 2
+    // InnerHTML to to co jest w środku elementu, a outerHTML co cały element wraz z jego tagami
     for (let i = 0; i < blocks.length; i++) {
-        let innerContent = blocks[i].innerHTML;
-        let outerContent = blocks[i].outerHTML;
-        console.log(innerContent, 'innerHTML');
-        console.log(outerContent, 'outerHTML');
-        console.log('==Nowa wartość==');
-        innerContent = "Nowa wartość diva o klasie blocks";
-        console.log(innerContent, 'innerHTML');
-        console.log(outerContent, 'outerHTML');
+        console.log('====== INNER HTML ======');
+        console.log(blocks[i].innerHTML);
+        console.log('====== OUTER HTML ======');
+        console.log(blocks[i].outerHTML);
+        console.log('====== Nowa wartość ======');
+        blocks[i].innerHTML = "Nowa wartość diva o klasie blocks";
+        console.log('====== INNER HTML ======');
+        console.log(blocks[i].innerHTML);
+        console.log('====== OUTER HTML ======');
+        console.log(blocks[i].outerHTML);
     }
 
     // Zadanie 3
-    const mainFooter = document.getElementById("mainFooter");
-    console.log(getId(mainFooter));
+    const mainFooter = document.querySelector("#mainFooter");
     function getId(element) {
         return element.id;
-    };
+    }
+    console.log(getId(mainFooter));
 
     // Zadanie 4
-    console.log(getTags(childElements));
     function getTags(elements) {
-        let tagsArray = [];
+        let array = [];
         for (let i = 0; i < elements.length; i++) {
-            tagsArray.push(elements[i].tagName);
+            array.push(elements[i].tagName);
         }
-        return tagsArray;
-    };
+        return array;
+    }
+    console.log(getTags(childElements));
 
 
     // Zadanie 5
-    console.log(getClassInfo(banner));
     function getClassInfo(element) {
-        const classArray = [];
+        const array = [];
         for (let i = 0; i < element.classList.length; i++) {
-            classArray.push(element.classList[i]);
+            array.push(element.classList[i]);
         }
-        return classArray;
+        return array;
     }
+    console.log(getClassInfo(banner));
 
     // Zadanie 6
-    var liElements = document.querySelectorAll("nav li");
-    setDataDirection(liElements);
+    let allLis = document.querySelectorAll("nav li");
+    console.log(allLis);
+    setDataDirection(allLis);
+    console.log(allLis);
     function setDataDirection(elements) {
         for (let i = 0; i < elements.length; i++) {
             if (!elements[i].dataset.hasOwnProperty("direction")) {

@@ -1,5 +1,5 @@
 //Zadanie 0
-var car= {
+var car = {
     brand: "Mercedes",
     color: "Czarny",
     numberOfKilometers: 0,
@@ -19,9 +19,10 @@ car.review = ["20.12.1996", "20.12.1997"];
 car.addReview = function (date) {
     this.review.push(date);
 };
-car.getAllReviwe = function () {
+car.getAllReview = function () {
     return this.review;
 };
+console.log(car.getAllReview());
 
 //Zadanie 3
 const stairs = {

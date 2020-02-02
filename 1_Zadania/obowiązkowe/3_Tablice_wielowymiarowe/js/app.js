@@ -1,27 +1,21 @@
 // Zadanie 0
-function checkArray(array) {
-    const result = [];
-    array.map(element => {
-        let elementCheck = null;
-        element.map(el => {
-            if (Number.isInteger(el)) {
-                if (el % 2 === 0) {
-                    if (elementCheck == null) {
-                        elementCheck = true;
-                    }
-                } else {
-                    elementCheck = false;
-                }
-            } else {
-                throw new Error("Niepoprawne dane");
-            }
-        });
-        if (elementCheck != null) {
-            result.push(elementCheck);
-        }
+function checkArray(array){
 
-    });
-    return result;
+    let newArray = [];
+
+    for(let i = 0; i < array.length; i++)
+    {
+        let checked = true;
+        for(let j = 0; j < array[i].length; j++)
+        {
+            if(array[i][j]%2 != 0)
+                checked = false;
+        }
+        newArray.push(checked);
+    }
+
+    console.log(newArray);
+    return newArray;
 }
 
 checkArray([
@@ -30,13 +24,6 @@ checkArray([
     [-4, -120],
     [0, 0],
     [1, 34]
-]);
-checkArray([
-    [21.5, 12],
-    [42, 2.5],
-    [4, 51],
-    [10, 0],
-    [17, 34]
 ]);
 
 
@@ -79,28 +66,35 @@ for (let i = 0; i < task2Array.length; i++) {
 }
 
 //Zadanie 3
-function print2DArray(array2d) {
-    array2d.map(el => {
-        console.log(el);
-    });
+function print2DArray(array) {
+    for(let i = 0; i < array.length; i++)
+    {
+        for(let j = 0; j < array[i].length; j++)
+        {
+            console.log(array[i][j]);
+        }
+    }
 }
 
+print2DArray([[1,2], [3,4]]);
+
+
 //Zadanie 4
-const task4Array = [[15,1, "Andrzej"], [18,3, "Marcin"]];
-print2DArray(task4Array);
+const arrayTask4 = [[5,6], [7,8]];
+print2DArray(arrayTask4);
 
 //Zadanie 5
 function create2DArray(rows, columns) {
-    const array2d = [];
-    //zaczyna od 1 nie 0
-    let count = 1;
-    for (let i = 0; i < rows; i++) {
-        array2d.push([]);
+    const array = [];
+    let number = 1;
+    for (let i = 0; i < rows; i++)
+    {
+        array.push([]);
         for (let j = 0; j < columns; j++) {
-            array2d[i].push(count);
-            count++;
+            array[i].push(number);
+            number++;
         }
     }
-    return array2d;
+    return array;
 }
 console.log(create2DArray(10, 2));

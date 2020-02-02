@@ -1,3 +1,4 @@
+// Zadanie 6
 document.addEventListener("DOMContentLoaded", function () {
     
     let box = document.getElementById("box");

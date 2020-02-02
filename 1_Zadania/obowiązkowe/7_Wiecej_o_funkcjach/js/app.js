@@ -5,30 +5,28 @@
  */
 
 
-//funkcja "jeden"
+//deklaracja funkcji "jeden"
 function jeden() {
 
-    //zmienna o zasiegu blokowym
+    //deklaracja zmiennej blokowej i przypisanie wartosci
     var zmienna1 = 1;
 
-    //funckja "dwa"
+    //deklaracja funkcji "jeden"
     function dwa() {
 
-        //wyświetlenie "zmienna1"
+        //wyświetlenie w logu zmiennej "zmienna1"
         console.log(zmienna1);
 
-        //zmianna o zasiegu blokowym
+        //deklaracja zmiennej blokowej i przypisanie wartosci
         var zmienna2 = 3;
     }
 
     //wywołanie funkcji "dwa"
     dwa();
 
-    // proba wypisania "zmienna2"
-    // zmienna nie ma "zasiegu" poza funkcje "dwa" poniewaz
-    // jej przypisanie znajduje się wewnatrz funkcji "dwa" 
+    // proba wypisania "zmienna2", która nie wypisze sie ponieważ ma zasieg w funkcji dwa()
     console.log(zmienna2);
 }
 
-// wywołanie funkcji jeden
+// wywołanie funkcji jeden która wyświetla zmienna1 i wyrzuca ReferanceError ponieważ nie widzi zmienna2
 jeden();

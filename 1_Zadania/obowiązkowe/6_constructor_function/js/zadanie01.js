@@ -14,7 +14,7 @@ Robot.prototype.sayHi = function (toWho) {
 };
 
 Robot.prototype.changeName = function (newname) {
-    console.log("Robot " + this.name + "changes name to " + newname);
+    console.log("Robot " + this.name + " changes name to " + newname);
     this.name = newname;
 };
 
@@ -24,6 +24,6 @@ Robot.prototype.fixIt = function () {
 };
 
 var robot = new Robot("Robot1")
-robor.sayHi("Robot2");
+robot.sayHi("Robot2");
 robot.changeName('Robot3');
 robot.fixIt();

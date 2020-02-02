@@ -1,3 +1,4 @@
+// Zadanie 7
 document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector('#element1').addEventListener('click', function (e) {
 		console.log('Event in #element1 fired!');

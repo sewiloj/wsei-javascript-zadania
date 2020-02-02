@@ -9,15 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //Zadanie 1
 
     //1.1
-    // próbujemy dostać się do elementu który nie istnieje, bo najpierw ładuje się skrypt js a pozniej html
-
+    // próbujemy dostać się do elementu który nie isniteje, bo najpierw ładujemy JS, a potem dopiero html
 
     //1.2
-    // event "DOMContentLoaded" kaze przeglarace poczekac  
-    //zanim zaladuje sie strona i dopiero wtedy odpala skrypt
+    // Poprawiło, ponieważ skrypt każe teraz czekać przeglądarce, aż cała strona się wczyta
 
     //1.3 
-    //Nic to nie zmienia
+    // nie ma zmian
 
     
 });

@@ -1,13 +1,13 @@
 // Zadanie 8
 window.addEventListener("DOMContentLoaded", event => {
-    const getWindowWidth = document.getElementById("windowWidth");
-    const getWindowHeight = document.getElementById("windowHeight");
+    const windowWidth = document.querySelector("#windowWidth");
+    const windowHeight = document.querySelector("#windowHeight");
 
-    getWindowWidth.innerText = window.innerWidth;
-    getWindowHeight.innerText = window.innerHeight;
+    windowWidth.innerText = window.innerWidth;
+    windowHeight.innerText = window.innerHeight;
 
     window.addEventListener("resize", () => {
-        getWindowWidth.innerText = window.innerWidth;
-        getWindowHeight.innerText = window.innerHeight;
+        windowWidth.innerText = window.innerWidth;
+        windowHeight.innerText = window.innerHeight;
     });
 });

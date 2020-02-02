@@ -13,8 +13,6 @@ callOtherFunction(function (a, b) {
 });
 
 callOtherFunction(function (a, b) {
-    console.log("Pierwsza wartosc:", a);
-    console.log("Druga wartosc:", b);
-    console.log("Wynik", a * b);
+    console.log((a + b) / 2);
 });
 
